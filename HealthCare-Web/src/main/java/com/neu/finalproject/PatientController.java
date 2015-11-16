@@ -80,7 +80,7 @@ public class PatientController {
 	    @RequestMapping(value= "/addpatient", method = RequestMethod.POST)
 	    public String addEmployee(@Valid @ModelAttribute("combined")Combined combined, BindingResult result,Model model,HttpServletRequest request){
 	        if(result.hasErrors()){
-	        	System.out.println("HIIIIIII");
+	        	//System.out.println("HIIIIIII");
 	        	ArrayList<UserAccount> employeeList = employeeDao.getDoctors();
 				model.addAttribute("eList", employeeList);
 	        	return "registration1";
@@ -89,7 +89,7 @@ public class PatientController {
 	    	try {
 //	    		HttpSession session = request.getSession();
 //	        	users=(UserAccount)session.getAttribute("user1");
-	        	System.out.println("HIIIIIIIIIIIIIIIIIII");
+	        	//System.out.println("HIIIIIIIIIIIIIIIIIII");
 	    		
 				employeeDao.addPatient(combined.getPatient(),combined.getUserAccount());
 				ArrayList<UserAccount> employeeList = employeeDao.getDoctors();

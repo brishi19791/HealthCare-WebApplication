@@ -48,7 +48,7 @@ public class PatientDao extends DAO{
 				Query query = session.createQuery("from LabWorkRequest where WorkRequest_ID= :wID");
 				query.setString("wID",wID);
 				LabWorkRequest lwr=(LabWorkRequest)query.uniqueResult();
-				System.out.println("LABWORKREQUESTTTTTTTT"+lwr.getwID());
+				//System.out.println("LABWORKREQUESTTTTTTTT"+lwr.getwID());
 				lwr.setMessage(message);
 				lwr.setStatus("Completed!!");;
 				lwr.getEncounter().getLabTest().setTestStatus("Completed");

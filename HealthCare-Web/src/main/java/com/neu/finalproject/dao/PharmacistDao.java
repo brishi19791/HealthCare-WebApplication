@@ -22,7 +22,7 @@ public class PharmacistDao extends DAO {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		System.out.println("useerrrrrrrrrrrr"+drug.getDrugName());
+		//System.out.println("useerrrrrrrrrrrr"+drug.getDrugName());
 		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
    		String requestDate = sdf.format(new Date()); 
    		drug.setManufactureDate(requestDate);
@@ -39,7 +39,7 @@ public class PharmacistDao extends DAO {
 		ArrayList<Drug> drugList = new ArrayList();
 		Query q = getSession().createQuery("from Drug");
 		drugList = (ArrayList<Drug>)q.list();
-		System.out.println("Number of employees is "+drugList.size());
+		//System.out.println("Number of employees is "+drugList.size());
 		close();
 		return drugList;
 	}

@@ -16,7 +16,7 @@ public class NurseDao extends DAO {
 		Query q = getSession().createQuery("from Patient");
 		//q.setString("username", userName);
 		patientList = (ArrayList<Employee>)q.list();
-		System.out.println("Number of messages is "+patientList.size());
+		//System.out.println("Number of messages is "+patientList.size());
 		close();
 		return patientList;
 	}

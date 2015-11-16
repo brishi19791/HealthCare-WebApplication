@@ -107,7 +107,7 @@ public class LabController {
 	    	HttpSession session = request.getSession();
 		    //session.setAttribute("userAccount", user);
 	    	user=(UserAccount)session.getAttribute("userAccount");
-		    System.out.println("DOCTORRR"+user.getUserName());
+		    //System.out.println("DOCTORRR"+user.getUserName());
 		    ArrayList<Patient> pList=employeeDao.getpatientfordoctor(user.getUserName());
 		    ArrayList<LabWorkRequest> workRequestList=employeeDao.getLabWorkRequest();
 		    model.addAttribute("pList", pList);
@@ -122,7 +122,7 @@ public class LabController {
 	    	HttpSession session = request.getSession();
 		    //session.setAttribute("userAccount", user);
 	    	user=(UserAccount)session.getAttribute("userAccount");
-		    System.out.println("DOCTORRR"+user.getUserName());
+		    //System.out.println("DOCTORRR"+user.getUserName());
 		    ArrayList<Patient> pList=employeeDao.getpatientfordoctor(user.getUserName());
 		    ArrayList<LabWorkRequest> workRequestList=employeeDao.getLabWorkRequest();
 		    model.addAttribute("pList", pList);

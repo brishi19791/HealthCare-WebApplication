@@ -1,7 +1,7 @@
 # HealthCare-WebApplication
 Health care web application using Spring MVC, Hibernate, MySQL
 
-In order to run the project, we have create few useraccounts to login.
+In order to run the project, we have to create few useraccounts for logging.
 
 Should run java file present in below path which will create admin,doctor,nurse,lab assistant and pharmacist:
 src\test\java\com\neu\project\Mapping.java
